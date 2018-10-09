@@ -1,21 +1,22 @@
-%define	major	0
-%define	libname	%mklibname umockdev %{major}
-%define	devname	%mklibname -d umockdev
+%define major 0
+%define libname %mklibname umockdev %{major}
+%define devname %mklibname -d umockdev
 
 Name:		umockdev
-Version:	0.8.11
+Version:	0.12
 Release:	1
 Summary:	Mock hardware devices
 
 Group:		Development/C
 License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
-Source0:	https://launchpad.net/umockdev/trunk/%{version}/+download/%{name}-%{version}.tar.xz
+Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
-BuildRequires:	pkgconfig(gudev-1.0) pkgconfig(systemd)
+BuildRequires:	pkgconfig(gudev-1.0)
+BuildRequires:	pkgconfig(systemd)
 BuildRequires:	vala
 # Required for tests
 BuildRequires:	gphoto2
@@ -43,16 +44,17 @@ The %{name}-devel package contains the libraries to develop
 using %{name}.
 
 %prep
-%setup -q
+%autosetup -p1
 
 %build
 %configure --enable-gtk-doc
 
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
+find %{buildroot} -name '*.la' -delete
 rm -r %{buildroot}%{_datadir}/doc/umockdev
 
 %check
