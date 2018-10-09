@@ -17,6 +17,7 @@ BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
 BuildRequires:	pkgconfig(systemd)
+BuildRequires:	pkgconfig(udev)
 BuildRequires:	vala
 # Required for tests
 BuildRequires:	gphoto2
