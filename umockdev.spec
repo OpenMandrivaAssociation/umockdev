@@ -4,7 +4,7 @@
 
 Name:		umockdev
 Version:	0.12
-Release:	1
+Release:	2
 Summary:	Mock hardware devices
 
 Group:		Development/C
