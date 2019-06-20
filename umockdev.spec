@@ -3,7 +3,7 @@
 %define devname %mklibname -d umockdev
 
 Name:		umockdev
-Version:	0.12
+Version:	0.12.1
 Release:	2
 Summary:	Mock hardware devices
 
