@@ -3,7 +3,7 @@
 %define devname %mklibname -d umockdev
 
 Name:		umockdev
-Version:	0.14.1
+Version:	0.15.3
 Release:	1
 Summary:	Mock hardware devices
 
@@ -21,7 +21,7 @@ BuildRequires:	pkgconfig(udev)
 BuildRequires:	vala
 # Required for tests
 BuildRequires:	gphoto2
-BuildRequires:	python3
+BuildRequires:	python
 
 %description
 With this program and libraries you can easily create mock udev objects.
