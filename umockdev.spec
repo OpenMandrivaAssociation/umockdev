@@ -12,6 +12,7 @@ License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
+BuildRequires:  meson
 BuildRequires:	gtk-doc
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
@@ -48,12 +49,12 @@ using %{name}.
 %autosetup -p1
 
 %build
-%configure --enable-gtk-doc
+%meson
 
-%make_build
+%meson_build
 
 %install
-%make_install
+%meson_install
 
 find %{buildroot} -name '*.la' -delete
 rm -r %{buildroot}%{_datadir}/doc/umockdev
