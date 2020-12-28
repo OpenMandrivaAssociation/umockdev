@@ -78,6 +78,7 @@ find %{buildroot} -name '*.la' -delete
 %files -n %{devname}
 %doc docs/script-format.txt docs/examples/battery.c docs/examples/battery.py
 %{_libdir}/libumockdev.so
+%{_libdir}/libumockdev-preload.so
 %{_libdir}/pkgconfig/umockdev-1.0.pc
 %{_datadir}/gir-1.0/UMockdev-1.0.gir
 %{_includedir}/umockdev-1.0
