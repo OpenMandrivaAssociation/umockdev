@@ -81,5 +81,4 @@ find %{buildroot} -name '*.la' -delete
 %{_libdir}/pkgconfig/umockdev-1.0.pc
 %{_datadir}/gir-1.0/UMockdev-1.0.gir
 %{_includedir}/umockdev-1.0
-%{_datadir}/gtk-doc/html/umockdev/
 %{_datadir}/vala/vapi/umockdev-1.0.vapi
