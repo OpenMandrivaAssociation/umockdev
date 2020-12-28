@@ -59,7 +59,7 @@ using %{name}.
 %meson_install
 
 find %{buildroot} -name '*.la' -delete
-rm -r %{buildroot}%{_datadir}/doc/umockdev
+#rm -r %{buildroot}%{_datadir}/doc/umockdev
 
 %check
 # Disabled for now, as the Xorg tests don't pass
