@@ -11,6 +11,8 @@ Group:		Development/C
 License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
+# Upstream https://github.com/martinpitt/umockdev/issues/116#event-4150587532
+Patch0:   umockdev-0.15.3-fix-clang.patch
 
 BuildRequires:  meson
 BuildRequires:	gtk-doc
