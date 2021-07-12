@@ -67,7 +67,7 @@ find %{buildroot} -name '*.la' -delete
 # make check
 
 %files 
-%doc README.rst
+%doc README.md
 %{_bindir}/umockdev-*
 %{_libdir}/girepository-1.0/UMockdev-1.0.typelib
 
