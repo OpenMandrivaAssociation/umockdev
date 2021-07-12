@@ -13,7 +13,9 @@ URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
 BuildRequires:  meson
+BuildRequires:  cmake
 BuildRequires:	gtk-doc
+BuildRequires:  pkgconfig(libpcap)
 BuildRequires:	pkgconfig(gobject-introspection-1.0)
 BuildRequires:	pkgconfig(glib-2.0)
 BuildRequires:	pkgconfig(gudev-1.0)
