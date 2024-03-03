@@ -1,9 +1,10 @@
 %define major 0
-%define libname %mklibname umockdev %{major}
+%define libname %mklibname umockdev
+%define oldlibname %mklibname umockdev 0
 %define devname %mklibname -d umockdev
 
 Name:		umockdev
-Version:	0.17.18
+Version:	0.18.0
 Release:	1
 Summary:	Mock hardware devices
 
@@ -34,6 +35,7 @@ hardware devices.
 %package -n	%{libname}
 Summary:	Libraries for umockdev
 Group:		System/Libraries
+%rename %{oldlibname}
 
 %description -n	%{libname}
 Libraries for umockdev.
