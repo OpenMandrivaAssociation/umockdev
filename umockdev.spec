@@ -53,6 +53,7 @@ using %{name}.
 %autosetup -p1
 
 %build
+# Due https://github.com/martinpitt/umockdev/issues/260
 export CC=gcc
 export CXX=g++
 %meson
