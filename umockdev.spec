@@ -13,9 +13,8 @@ License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
-BuildConflict:  clang = 19.1.6
-BuildConflict:  llvm = 19.1.6
-BuildConflict:  lib64omp = 19.1.6
+BuildRequires:  llvm = 19.1.5
+BuildRequires:  lib64omp = 19.1.5
 BuildRequires:  clang = 19.1.5
 BuildRequires:  meson
 BuildRequires:  cmake
