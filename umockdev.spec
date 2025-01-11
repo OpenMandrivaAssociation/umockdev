@@ -15,6 +15,7 @@ License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
+BuildRequires:  mold
 BuildRequires:  llvm = 19.1.5
 BuildRequires:  lib64omp = 19.1.5
 BuildRequires:  clang = 19.1.5
@@ -62,10 +63,10 @@ using %{name}.
 # Due https://github.com/martinpitt/umockdev/issues/260
 #export CC=gcc
 #export CXX=g++
-%global ldflags %{ldflags} -fuse-ld=bfd
-export CFLAGS="%{optflags} -fuse-ld=bfd"
-export LDFLAGS="-fuse-ld=bfd"
-export LD=bfd
+%global ldflags %{ldflags} -fuse-ld=mold
+export CFLAGS="%{optflags} -fuse-ld=mold"
+export LDFLAGS="-fuse-ld=mold"
+export LD=mold
 %meson
 
 %meson_build
