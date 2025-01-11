@@ -5,7 +5,7 @@
 
 Name:		umockdev
 Version:	0.19.0
-Release:	1
+Release:	2
 Summary:	Mock hardware devices
 
 Group:		Development/C
@@ -13,6 +13,7 @@ License:	LGPLv2+
 URL:		https://launchpad.net/umockdev
 Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{name}-%{version}.tar.xz
 
+BuildRequires:  clang = 19.1.5
 BuildRequires:  meson
 BuildRequires:  cmake
 BuildRequires:	gtk-doc
@@ -54,8 +55,8 @@ using %{name}.
 
 %build
 # Due https://github.com/martinpitt/umockdev/issues/260
-export CC=gcc
-export CXX=g++
+#export CC=gcc
+#export CXX=g++
 %meson
 
 %meson_build
