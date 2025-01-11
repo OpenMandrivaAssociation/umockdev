@@ -62,6 +62,7 @@ using %{name}.
 #export CC=gcc
 #export CXX=g++
 %global ldflags %{ldflags} -fuse-ld=bfd
+export LD=bfd
 %meson
 
 %meson_build
