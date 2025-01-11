@@ -18,6 +18,7 @@ Source0:	https://github.com/martinpitt/umockdev/releases/download/%{version}/%{n
 BuildRequires:  llvm = 19.1.5
 BuildRequires:  lib64omp = 19.1.5
 BuildRequires:  clang = 19.1.5
+BuildRequires:  lld = 19.1.5
 BuildRequires:  meson
 BuildRequires:  cmake
 BuildRequires:	gtk-doc
