@@ -63,6 +63,8 @@ using %{name}.
 #export CC=gcc
 #export CXX=g++
 %global ldflags %{ldflags} -fuse-ld=bfd
+export CFLAGS="%{optflags} -fuse-ld=bfd"
+export LDFLAGS="-fuse-ld=bfd"
 export LD=bfd
 %meson
 
