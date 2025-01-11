@@ -1,3 +1,5 @@
+%define _disable_lto 1
+
 %define major 0
 %define libname %mklibname umockdev
 %define oldlibname %mklibname umockdev 0
