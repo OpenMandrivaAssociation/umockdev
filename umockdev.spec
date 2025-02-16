@@ -54,8 +54,8 @@ using %{name}.
 
 %build
 # Due https://github.com/martinpitt/umockdev/issues/260
-#export CC=gcc
-#export CXX=g++
+export CC=gcc
+export CXX=g++
 %meson
 
 %meson_build
