@@ -26,6 +26,7 @@ BuildRequires:	vala
 # Required for tests
 BuildRequires:	gphoto2
 BuildRequires:	python
+BuildRequires:  libatomic-devel
 
 %description
 With this program and libraries you can easily create mock udev objects.
